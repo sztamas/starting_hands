@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Starting Hands</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/starting-hands.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Poker Starting Hands</h1>
+        <p class="lead">Texas Hold'em starting hand categories memorisation tool.</p>
+
+         <div id="mode" class="btn-group">
+           <button id="btn-realistic" type="button" class="btn btn-default">Realistic</button>
+           <button id="btn-even-distr" type="button" class="btn btn-default">Even distribution</button>
+           <button id="btn-no-trash" type="button" class="btn btn-default">No Trash</button>
+         </div>
+
+         <div class="well">
+           <img id="card1" class="card" src="img/Blue_Back.svg" height="400"/>
+           <img id="card2" class="card" src="img/Blue_Back.svg" height="400"/>
+         </div>
+
+         <div id="answer" class="btn-group btn-group-lg">
+           <button id="btn-very-strong" type="button" class="btn btn-default">Very Strong</button>
+           <button id="btn-strong" type="button" class="btn btn-default">Strong</button>
+           <button id="btn-mediocre" type="button" class="btn btn-default">Mediocre</button>
+           <button id="btn-speculative" type="button" class="btn btn-default">Speculative</button>
+           <button id="btn-mixed" type="button" class="btn btn-default">Mixed</button>
+           <button id="btn-trash" type="button" class="btn btn-default">Trash</button>
+         </div>
+
+      </div>
+
+    </div><!-- /.container -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/lodash.underscore.min.js"></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
