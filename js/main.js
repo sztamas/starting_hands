@@ -55,20 +55,20 @@ function abbreviate(card1, card2) {
 function categorise(card1, card2) {
   var abbr = abbreviate(card1, card2);
 
-  if (_.contains(['AA', 'KK', 'QQ', 'AKs', 'AKo'], abbr)) {
+  if (_.includes(['AA', 'KK', 'QQ', 'AKs', 'AKo'], abbr)) {
     return 'very-strong';
   }
-  if (_.contains(['JJ', 'TT', '99', 'AQs', 'AQo', 'AJs'], abbr)) {
+  if (_.includes(['JJ', 'TT', '99', 'AQs', 'AQo', 'AJs'], abbr)) {
     return 'strong';
   };
-  if (_.contains(['AJo', 'ATs', 'ATo', 'KQs', 'KQo'], abbr)) {
+  if (_.includes(['AJo', 'ATs', 'ATo', 'KQs', 'KQo'], abbr)) {
     return 'mediocre';
   };
-  if (_.contains(['KJs', 'KTs', 'QJs', 'QTs', 'JTs', 'T9s',
+  if (_.includes(['KJs', 'KTs', 'QJs', 'QTs', 'JTs', 'T9s',
                   '88', '77', '66', '55', '44', '33', '22'], abbr)) {
     return 'speculative';
   };
-  if (_.contains(['KJo', 'KTo', 'QJo', 'QTo', 'JTo',
+  if (_.includes(['KJo', 'KTo', 'QJo', 'QTo', 'JTo',
                   'A9s', 'A8s', 'A7s', 'A6s', 'A5s', 'A4s', 'A3s', 'A2s',
                   'K9s', '87s', '98s'], abbr)) {
     return 'mixed';
@@ -109,7 +109,7 @@ function answerBtnHandler(ev) {
 }
 
 function realisticDraw() {
-  return _.sample(allCards, 2);
+  return _.sampleSize(allCards, 2);
 }
 
 function evenDistrDraw(categories) {
@@ -117,7 +117,7 @@ function evenDistrDraw(categories) {
   var category = _.sample(categories);
 
   do {
-    cards = _.sample(allCards, 2);
+    cards = _.sampleSize(allCards, 2);
     cardsCategory = categorise(cards[0], cards[1]);
   } while (cardsCategory !== category);
 
